@@ -21,3 +21,5 @@ AD8232
 >> Lo-, Lo+ - 10, 11, obojętna kolejność (czujniki podpięcia elektrod)
 >>
 >> OUT - A0
+
+> program w pythonie wrzucę jak go trochę ogarnę
