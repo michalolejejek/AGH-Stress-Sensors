@@ -1,7 +1,7 @@
 # EKG
-AD8232
+## AD8232
 
-** podłaczenie elektrod:
+## podłaczenie elektrod:
 >
 > niebieska - pod lewym cycem
 > 
@@ -12,7 +12,7 @@ AD8232
 > można nakleić też odpowiednio na rękach i nodze,
 > ale wtedy przynajmniej u mnie spierdala poza zakres
 
-** pinout:
+## pinout:
 >
 > GND - GND
 > 
@@ -25,4 +25,4 @@ AD8232
 >
 > OUT - A0
 
-** program w pythonie wrzucę jak go trochę ogarnę
+## program w pythonie wrzucę jak go trochę ogarnę
