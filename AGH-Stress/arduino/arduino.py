@@ -55,13 +55,17 @@ class Arduino:
 
     def create_log_file(self, path_to_folder = '', file_ext = "csv", filename = None):
         '''
-        Creates file for logging with set file_ext (must be trivially writeable)
-        Opens file and returns filename and path
+        Creates file for logging
+        Opens file and returns filename and full filepath
+
+        path_to_folder = where to store the file
+        file_ext = extension, must be trivially writeable
+        filename = custom filename, bu default creates datestamped log LOG_datestamp
         '''
         if not filename:
             now = datetime.now()
             str_now = now.strftime("%m%d_%H%M%S")
-            filename = str_now + '.' + file_ext
+            filename = "LOG_" + str_now + '.' + file_ext
         fullpath = path_to_folder + filename
         try:
             file = open(fullpath, "x")
