@@ -20,6 +20,12 @@ class Arduino:
 
 
     def _collect_data_to_arr(self, max_time = 1000, max_arr_len = 1000, encoding = 'UTF-8'):
+        '''
+        Collects data to python array
+        encoding = encoding of incoming data
+        max_time = time to collect data [in ms]
+        max_arr_len = maximum of datapoints to collect
+        '''
         self.connection.reset_output_buffer()
         self.connection.reset_input_buffer()
         begin_time = (round(time.time()*1000))
@@ -35,6 +41,13 @@ class Arduino:
 
 
     def _collect_data_to_file(self, output_file, file_sep = ',', max_time = 1000, max_arr_len = 1000, encoding = 'UTF-8'):
+        '''
+        Collects data to output_file, appending to it if already exists
+        encoding = encoding of incoming data
+        file_sep = separator to use in output file
+        max_time = time to collect data [in ms]
+        max_arr_len = maximum number of data samples to collect
+        '''
         self.connection.reset_output_buffer()
         begin_time = (round(time.time()*1000))
         current_time = begin_time - 2*max_time
